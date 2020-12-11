@@ -1,3 +1,6 @@
+# PIO build tree
+.pio
+
 # Prerequisites
 *.d
 
