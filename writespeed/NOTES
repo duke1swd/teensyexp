@@ -1,0 +1,49 @@
+Using 48KB of memory to write to Samsung industrial 8GB SD card.
+12/22/20
+
+	Buffer size is 512
+	Data rate 418.72 KB/sec
+	Data rate 1.22 millseconds/buffer
+	Max write time: 17.65 milliseconds
+	N buffers to trail: 95
+	Max N writes: 136.73 milliseconds
+	Guaranteed throughput: 355.73 KB/sec
+
+	Buffer size is 1024
+	Data rate 422.93 KB/sec
+	Data rate 2.42 millseconds/buffer
+	Max write time: 18.02 milliseconds
+	N buffers to trail: 47
+	Max N writes: 140.37 milliseconds
+	Guaranteed throughput: 342.88 KB/sec
+
+	Buffer size is 2048
+	Data rate 422.70 KB/sec
+	Data rate 4.85 millseconds/buffer
+	Max write time: 20.46 milliseconds
+	N buffers to trail: 23
+	Max N writes: 140.60 milliseconds
+	Guaranteed throughput: 335.03 KB/sec
+
+	Buffer size is 4096
+	Data rate 424.43 KB/sec
+	Data rate 9.65 millseconds/buffer
+	Max write time: 33.10 milliseconds
+	N buffers to trail: 11
+	Max N writes: 135.53 milliseconds
+	Guaranteed throughput: 332.44 KB/sec
+
+	Buffer size is 8192
+	Data rate 423.23 KB/sec
+	Data rate 19.36 millseconds/buffer
+	Max write time: 48.59 milliseconds
+	N buffers to trail: 5
+	Max N writes: 149.26 milliseconds
+	Guaranteed throughput: 274.42 KB/sec
+
+Assume we can hit 350K bytes/sec.
+If we can achieve 1M samples, we need 250 KB/sec using 8x downsample.
+This is 166,666 samples/sec/channel on 6 channels
+
+If our target frequency is 1 KHz, the sampling nyquist frequency is 6.4 octaves up.
+Given a 12-bit ADC, this suggests a 2-pole analog filter will be both necessary and sufficient.
